@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Formulário de cadastro</h1>
+        </div>
+    </header>
+    <div class="container">
+        <form>
+            <ul>
+                <li>
+                    <label for="nome-completo">Nome completo</label>
+                    <input type="text" name="nomeCompleto" id="nome-completo" required>
+                </li>
+                <li>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </li>
+                <li>
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" name="telefone" id="telefone" required>
+                </li>
+                <li>
+                    <label for="cpf">CPF</label>
+                    <input type="tel" name="cpf" id="cpf" id="cpf" required>
+                </li>
+                <li>
+                    <label for="endereço">Endereço completo</label>
+                    <input type="text" name="endereço" id="endereço" required>
+                </li>
+                <li>
+                    <label for="cep">CEP</label>
+                    <input type="tel" name="cep" id="cep" id="cep" required>
+                </li>
+                <button type="submit">Cadastrar</button>
+            </ul>
+        </form>
+        <table cellspacing = '0'>
+            <thead>
+                <tr>
+                    <th>
+                        Nome completo 
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Telefone
+                    </th>
+                    <th>
+                        CPF
+                    </th>
+                    <th>
+                        Endereço completo
+                    </th>
+                    <th>
+                        CEP
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Gabriel
+                    </td>
+                    <td>
+                        asfklfka@gmil.com
+                    </td>
+                    <td>
+                        (00) 00000-0000
+                    </td>
+                    <td>
+                        123.123.123-12
+                    </td>
+                    <td>
+                        Rua teste numero teste
+                    </td>
+                    <td>
+                        12340000
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="./plugins/jquery.mask.min.js"></script>
+</body>
+</html>
