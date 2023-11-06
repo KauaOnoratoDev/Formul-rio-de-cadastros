@@ -1,29 +1,28 @@
 $(document).ready(function() {
-let linhas = ''
-
+    lista = []
     $('form').on('submit', function(e) {
         e.preventDefault()
-
-        const nomeCompleto = $('#nome-completo').val()
-        const telefone = $('#telefone').val()
-        const email = $('#email').val()
-        const cpf = $('#cpf').val()
-        const endereço = $('#endereço').val()
-        const cep = $('#cep').val()
-
-        let linha = '<tr>'
-        linha += `<td>${nomeCompleto}</td>`
-        linha += `<td>${email}</td>`
-        linha += `<td>${telefone}</td>`
-        linha += `<td>${cpf}</td>`
-        linha += `<td>${endereço}</td>`
-        linha += `<td>${cep}</td>`
-        linha += '</tr>'
-        linhas += linha
-
-        const corpoTabela = $('tbody')
-        corpoTabela.innerHTML = linhas
+        lista.push('<tr>')
+        lista.push($(`<td>${$('#nome-completo').val()}</td>`))
+        lista.push($(`<td>${$('#email').val()}</td>`))
+        lista.push($(`<td>${$('#telefone').val()}</td>`))
+        lista.push($(`<td>${$('#cpf').val()}</td>`))
+        lista.push($(`<td>${$('#endereço').val()}</td>`))
+        lista.push($(`<td>${$('#cep').val()}</td>`))
+        lista.push('</tr>')
+        
+        for(var i = 0; i < lista.length; i++) {
+            $(lista[i]).appendTo('tbody')
+        }
+        $('#nome-completo').val('')
+        $('#email').val('')
+        $('#telefone').val('')
+        $('#cpf').val('')
+        $('#endereço').val('')
+        $('#cep').val('')
     })
+
+
     $('#telefone').mask('(00) 00000-0000', {
         placeholder: ''
     })
